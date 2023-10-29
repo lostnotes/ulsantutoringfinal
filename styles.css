@@ -1,0 +1,178 @@
+* {
+    font-family: 'Just Another Hand', Monaco, sans-serif;
+    font-size: 16px;
+}
+
+.header {
+    display: flex;
+    height: 12rem;
+    max-width: 90rem;
+    background: rgba(0, 81, 86, 0.11);
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#logo {
+    height: 27rem;
+    max-width: 37rem;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+.navigation {
+    background: rgba(0, 81, 86, 0.11);
+    height: 3rem;
+    max-width: 90rem;
+    border: .2rem solid rgba(0,81,86,1);
+    border-left: none;
+    border-right: none;
+
+}
+
+#navlist {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.navlink {
+    font-family: Itim, sans-serif;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(38, 38, 38, 0.66);
+}
+
+.welcome {
+    display: flex;
+    max-width: 42rem;
+    max-height: 6rem;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-top: 1.26rem;
+    padding-left: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+#welcomemsg {
+    color: rgba(0,81,86,1);
+    text-align: left;
+    font-size: 4.25rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.085rem;
+}
+
+.pageinfo {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.gist {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    max-width: 90rem;
+    height: 34rem;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,.25));
+    align-content:flex-end;
+    text-align: center;
+    color: rgba(0,81,86,1);
+    background: url(happy-students-learning-college-flat-illustration_74855-14419-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: inherit
+}
+
+#gistmsg {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0.08rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#gistsubtitle {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.02rem;
+}
+
+.signin {
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    height: 26rem;
+    max-width: 26rem;
+    border: 1px solid rgba(0, 81, 86, 0.11);
+    border-radius: 1.25rem;
+    background: rgba(0,81,86,0.11);
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,.25);
+    margin-left: 3vh;
+    padding: 0 2vh 0 2vh;
+}
+
+#signintitle {
+    color: rgba(38, 38, 38, 0.66);
+    text-align: center;
+    font-family: Itim, sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 2vh;
+    margin-top: 5vh;
+}
+
+#signinform {
+    display: flex;
+    flex-flow:column;
+    justify-self: center;
+}
+
+#password, #username {
+    height: 3.4rem;
+    width:20rem;
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(217, 217, 217, 0.25);
+    margin: 0 auto;
+}
+#password {
+    margin-bottom: -.3rem;
+    padding-bottom: 0;
+}
+
+#signin-btn {
+    height: 3.5rem;
+    width: 21rem;
+    border-radius: 0.9375rem;
+    border: 1px solid rgba(0, 81, 86, 0.49);
+    background: rgba(0, 81, 86, 0.49);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
+}
+
+.signinother {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#help, #sign-up {
+    color: #005156;
+    text-align: center;
+    font-family: Itim, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
