@@ -2,12 +2,19 @@
     font-family: 'Just Another Hand', Monaco, sans-serif;
     font-size: 16px;
 }
+body {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 12rem 4rem 6rem 1fr 6rem;
+    column-gap: 10px;
+}  
 
 .header {
-    display: flex;
+    grid-area: 1 / 1 / 2 / 4; 
     height: 12rem;
-    max-width: 90rem;
+    max-width: 100vw;
     background: rgba(0, 81, 86, 0.11);
+    display: flex;
     flex-flow: column;
     justify-content: center;
     align-content: center;
@@ -23,20 +30,23 @@
 }
 
 .navigation {
+     grid-area: 2 / 1 / 3 / 4; 
     background: rgba(0, 81, 86, 0.11);
-    height: 3rem;
-    max-width: 90rem;
+    /* height: 50%; */
+    overflow:hidden;
+    max-width: 100%;
     border: .2rem solid rgba(0,81,86,1);
     border-left: none;
     border-right: none;
-
+   
 }
 
 #navlist {
     list-style: none;
     display: flex;
+    flex-flow: row;
     justify-content: space-around;
-    align-content: center;
+
 }
 
 .navlink {
@@ -46,15 +56,15 @@
     font-weight: 400;
     color: rgba(38, 38, 38, 0.66);
 }
-
 .welcome {
+     grid-area: 3 / 1 / 4 / 3; 
     display: flex;
     max-width: 42rem;
     max-height: 6rem;
+    padding-left: 1.5rem;
     flex-flow: column wrap;
     justify-content: center;
-    margin-top: 1.26rem;
-    padding-left: 1.5rem;
+    margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
@@ -67,54 +77,19 @@
     letter-spacing: 0.085rem;
 }
 
-.pageinfo {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
-
-.gist {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    max-width: 90rem;
-    height: 34rem;
-    filter: drop-shadow(0px 4px 4px rgba(0,0,0,.25));
-    align-content:flex-end;
-    text-align: center;
-    color: rgba(0,81,86,1);
-    background: url(happy-students-learning-college-flat-illustration_74855-14419-removebg-preview.png);
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: inherit
-}
-
-#gistmsg {
-    font-size: 4rem;
-    font-weight: 400;
-    letter-spacing: 0.08rem;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-top: 0;
-}
-
-#gistsubtitle {
-    font-size: 3rem;
-    font-weight: 400;
-    letter-spacing: 0.02rem;
-}
-
 .signin {
+    grid-area: 4 / 1 / 5 / 2; 
     display: flex;
     flex-flow: column;
     align-content: center;
     height: 26rem;
-    max-width: 26rem;
+    max-width: 20rem;
+    min-width: 0;
     border: 1px solid rgba(0, 81, 86, 0.11);
     border-radius: 1.25rem;
     background: rgba(0,81,86,0.11);
     box-shadow: 0px 4px 4px 0px rgba(0,0,0,.25);
-    margin-left: 3vh;
+ margin: auto auto;
     padding: 0 2vh 0 2vh;
 }
 
@@ -128,23 +103,27 @@
     line-height: normal;
     margin-left: 2vh;
     margin-top: 5vh;
+    margin-bottom: 0;
 }
 
 #signinform {
     display: flex;
     flex-flow:column;
     justify-self: center;
+    padding-bottom: 5px;
+    margin-top: 2vh;
 }
 
 #password, #username {
     height: 3.4rem;
-    width:20rem;
+    width:18rem;
     border-bottom: 1px solid #000;
     border-top: none;
     border-left: none;
     border-right: none;
     background: rgba(217, 217, 217, 0.25);
     margin: 0 auto;
+    font-size: 1.5rem;
 }
 #password {
     margin-bottom: -.3rem;
@@ -153,12 +132,13 @@
 
 #signin-btn {
     height: 3.5rem;
-    width: 21rem;
+    width: 19rem;
     border-radius: 0.9375rem;
     border: 1px solid rgba(0, 81, 86, 0.49);
     background: rgba(0, 81, 86, 0.49);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     margin: 0 auto;
+    font-size: 2rem;
 }
 
 .signinother {
@@ -175,4 +155,50 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+.gist {
+    grid-area: 4 / 2 / 5 / 4; 
+    min-width: 0;
+    display: flex;
+   flex-flow: column wrap;
+    justify-content: flex-start;
+    max-width: 100%;
+    height: 100vh; 
+    align-content:flex-end;
+    text-align: center;
+    color: rgba(0,81,86,1);
+    background-image: url(happy-students-learning-college-flat-illustration_74855-14419-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: inherit;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,.25));
+  
+   
+}
+
+#gistmsg {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0.08rem;
+    margin-top: 24vh;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0;
+}
+
+#gistsubtitle {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.02rem;
+    margin-top: 0;
+}
+footer {
+    grid-area: 5 / 1 / 6 / 4;
+    text-align: center;
+    border: .2rem solid rgba(0,81,86,1);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    
 }
